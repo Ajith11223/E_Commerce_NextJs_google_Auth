@@ -9,11 +9,10 @@ export default function Home() {
 return <Layout>
   <div className="text-blue-900 flex justify-between">
     <h2>Hello,<b>{session?.user?.name}</b></h2>
-    <div className="flex bg-gray-300 text-black flex-col  gap-1 rounded-lg overflow-hidden">
-    {session?.user?.name}
+    <div className="flex bg-gray-300 text-black   gap-1 rounded-lg overflow-hidden">
 
  <img src={session?.user?.image} alt="" className="w-6 h-6"/>
- <button onClick={() => signOut()}>Sign out</button>
+    {session?.user?.name}
  
  
     </div>
