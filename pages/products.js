@@ -10,7 +10,7 @@ const Products = () => {
   useEffect(()=>{
      axios.get('/api/product').then((res)=>{
       setProductData(res.data)
-      console.log(res.data)
+      
      })
   },[])
   return (

@@ -45,7 +45,6 @@ if(goToProduct){
 const uploadImages=async(e)=>{
   const files = e.target?.files
   if(files?.length > 0){
-    setLoader(true)
     const data = new FormData()
 
     for(const file of files){
@@ -59,7 +58,6 @@ const uploadImages=async(e)=>{
 
    return dat.json()
  }).then((datas)=>{
-  console.log(datas)
    setImages((old)=> [...old,...datas?.links])
  })
 //  const datas =res?.data?.links
@@ -67,7 +65,6 @@ const uploadImages=async(e)=>{
 }
 
 }
-setLoader(false)
 
   return (
     <>
